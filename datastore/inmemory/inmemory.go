@@ -60,8 +60,6 @@ func (i *inMemoryDatastore) UpdateTransaction(txn models.Transaction) (err error
 		}
 	}
 
-	fmt.Println(oldTxn)
-
 	i.transactionMap[txn.ID] = txn
 	if txn.ParentTransactionID != nil {
 		i.parentMap[*txn.ParentTransactionID] = append(i.parentMap[*txn.ParentTransactionID], txn.ID)
