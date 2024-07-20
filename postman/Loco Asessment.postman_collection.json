@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "6e5cdf8a-9cbc-426f-84a2-77dbcdb4a345",
+		"name": "Loco Asessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37117333"
+	},
+	"item": [
+		{
+			"name": "Add Transaction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\":10000,\n    \"transaction_type\":\"cars\",\n    \"parent_id\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get txn by Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/types/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"types",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Txn by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/transaction/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"transaction",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sum",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/sum/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"sum",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
